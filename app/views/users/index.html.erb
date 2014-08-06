@@ -3,7 +3,8 @@
 <ul>
 <% @users.each do |u| %>
 	<li>
-		<%= link_to u.name, edit_user_path(u.id) %>
+    <%= u.name  %> - <%= u.email %>
+		<%= link_to "Edit User", edit_user_path(u.id) %>
 		<%= button_to "X", user_path(u.id), method: :delete %>
 	</li>
 <% end %>
